@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 //Displays "Hello World!" when the user goes to http://localhost:8000/
-router.get("/", (req, res) => res.send("<h1>Hello World!<h1>"));
+router.get("/", (req, res) => res.send("<h1>Hello World.<h1>"));
 
 //Displays an about page when the user goes to http://localhost:8000/about
 router.get("/about", (req, res) => res.send("<h1>This is the about page</h1>"));
