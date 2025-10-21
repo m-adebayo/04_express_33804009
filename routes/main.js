@@ -25,10 +25,10 @@ router.get("/welcome/:name", (req, res) => {
 //Displays use of a chain to show two messages, when the user visits http://localhost:8000/chain
 router.get("/chain", 
   (req, res, next) => {
-    req.message = "<h1>And this is from the first!<h1>";
+    req.message = "<h1>This message is from the first handler!<h1>";
     next();
   },
-  (req, res) => res.send(`<h1This message is from the second.</h1><p>${req.message}</p>`)
+  (req, res) => res.send(`<h1>And this is from the second.</h1><p>${req.message}</p>`)
 );
 
 router.get("/file", (req, res) => {
